@@ -1,0 +1,19 @@
+def StrongNumber(n):
+    out=0
+    a=n
+    while n>0:
+        rem=n%10
+        fact=1
+        while rem>0:
+            fact=fact*rem
+            rem=rem-1
+        out=out+fact
+        n=n//10
+    if a==out:
+        return "Strong Number"
+    else:
+        return "Not a Strong number"
+            
+n=int(input("Enter the number:"))
+print(StrongNumber(n))
+    
